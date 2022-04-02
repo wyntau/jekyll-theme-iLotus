@@ -1,0 +1,19 @@
+copyright:
+  begin_year: 2011
+
+nav_items:
+  - title: 首页
+    url: /
+    icon: fa fa-home
+    class: home
+  - title: 文章归档
+    url: /archives.html
+    icon: fa fa-reorder
+  - title: 文章标签
+    url: /tags.html
+    icon: fa fa-tags
+
+menu_items:
+  - title: 关于我
+    url: /contact.html
+    icon: fa fa-user
