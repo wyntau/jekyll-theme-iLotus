@@ -1,0 +1,7 @@
+_config.yml
+Gemfile
+Gemfile.lock
+.jekyll-cache
+
+_posts
+_site
