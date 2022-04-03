@@ -3,7 +3,7 @@
   {% case site.comments.provider %}
     {% when "disqus" %}
       {% if site.comments.disqus and site.comments.disqus.short_name %}
-        {% include comments-providers/disqus.html %}
+        {% include comments-disqus.html %}
       {% endif %}
   {% endcase %}
   </div>

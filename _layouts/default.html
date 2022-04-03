@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html id="J-html" class="">
 <head>
+  {% include custom-head-pre.html %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
@@ -8,8 +9,10 @@
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/assets/css/font-awesome.css' | relative_url }}" />
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/assets/css/rouge-github.css' | relative_url }}" />
+  {% include custom-head-post.html %}
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+  {% include custom-body-pre.html %}
   <nav class="lotus-nav">
     <ul>
       {% for nav in site.data.iLotus.nav_items %}
@@ -59,5 +62,6 @@
 <footer class="lotus-footer">
   <p>Copyright © {{ site.data.iLotus.copyright.begin_year }}–{{ site.time | date: "%Y" }} {{ site.title }} All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
 </footer>
+{% include custom-body-post.html %}
 </body>
 </html>
