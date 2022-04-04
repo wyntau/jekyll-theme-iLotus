@@ -1,42 +1,19 @@
-@charset "utf-8";
+---
+---
+
+@import 'libs/normalize';
+@import 'libs/typo';
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+  font-weight: 400;
+}
 
 /*************************
 Theme Name: iLotus
 Author: 展新(pizner@gmail.com)
 *************************/
 
-
-/*************************
- * style font
-*************************/
-
-@font-face {
-  font-family: 'PT Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Serif'), local('PTSerif-Regular'), url("../fonts/PTSerif-Regular.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: 'PT Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Serif Bold'), local('PTSerif-Bold'), url("../fonts/PTSerif-Bold.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: 'PT Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Serif Italic'), local('PTSerif-Italic'), url("../fonts/PTSerif-Italic.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: 'PT Serif';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Serif BoldItalic'), local('PTSerif-BoldItalic'), url("../fonts/PTSerif-BoldItalic.ttf") format('ttf');
-}
 
 /*************************
  * reset style
@@ -61,9 +38,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 audio, canvas, video {display: inline-block;
 }
 
-body, button, input, select, textarea {
+/* body, button, input, select, textarea {
   font: 500 14px/1.8 'PT Serif', 'Hiragino Sans GB', sans-serif;
-}
+} */
 
 table {
   border-collapse: collapse;
