@@ -20,44 +20,6 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, group, menu, nav, section {
-  margin: 0;
-  padding: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-audio, canvas, video {display: inline-block;
-}
-
-/* body, button, input, select, textarea {
-  font: 500 14px/1.8 'PT Serif', 'Hiragino Sans GB', sans-serif;
-} */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-th {
-  text-align: inherit;
-}
-
-fieldset, img {
-  border: 0;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-iframe {
-  display: block;
-}
-
 blockquote {
   padding: 0.5em 1em 0.1em 1em;
   margin-bottom: 1em;
@@ -77,84 +39,17 @@ blockquote blockquote {
   border-color: rgba(120, 120, 120, 0.1);
 }
 
-acronym, abbr {
-  border-bottom: 1px dotted;
-  font-variant: normal;
-}
-
-abbr {
-  cursor: help;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-address, caption, cite, code, den, em, th, var {
-  font-style: normal;
-  font-weight: 500;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-caption, th {
-  text-align: left;
-}
-
-q:before, q:after {
-  content: '';
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: text-top\9;
-}
-
-:root sub, :root sup {
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
 a {
   color: #065588;
   font-size: 100%;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-ins, a {
-  text-decoration: none;
-}
-
-u, .lotus-u {
-  text-decoration: underline;
-}
-
-mark {
-  background: #FFFB99;
-}
-
 pre, code {
-  font-family: "Courier New", Courier, monospace;
   overflow-x: auto;
   vertical-align: middle;
 }
 
 pre {
-  font-size: 12px;
   border: 1px solid #d8d8d8;
   border-left-width: 0.4em;
   background: rgba(214, 214, 214, 0.5);
@@ -163,9 +58,6 @@ pre {
 
 code {
   color: #4d4d4d;
-}
-
-code {
   padding: 0 0.2em;
   margin: 0;
   border: 1px solid #bdbdbd;
@@ -183,30 +75,6 @@ pre code{
   background-color: transparent;
   border: 0;
 }
-
-small {
-  font-size: 12px;
-  color: #888;
-}
-
-::selection {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-::-moz-selection {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-img::selection {
-  background: rgba(127, 191, 17, 0.2);
-  width: 100%;
-}
-
-img::-moz-selection {
-  background: rgba(127, 191, 17, 0.2);
-  width: 100%;
-}
-
 
 /*************************
  * function
