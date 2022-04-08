@@ -2,27 +2,25 @@
 layout: page
 ---
 
-{% for post in site.posts  %}
-  {% assign this_year = post.date | date: "%Y" %}
-  {% assign next_year = post.previous.date | date: "%Y" %}
-
-  {% if forloop.first %}
+{% if site.posts.size %}
   <ul>
-    <li><span>{{this_year}} &nbsp;</span>
-      <ul>
-  {% endif %}
-        <li>{{ post.date | date: "%m-%d" }} : <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% if forloop.last %}
-      </ul>
-    </li>
-  </ul>
-  {% elsif this_year != next_year %}
-      </ul>
-    </li>
-  </ul>
-  <ul>
-      <li><span>{{next_year}} &nbsp;</span>
-      <ul>
-  {% endif %}
+    {% for post in site.posts  %}
+      {% assign prev_post_year = post.next.date | date: "%Y" %}
+      {% assign this_post_year = post.date | date: "%Y" %}
+      {% assign next_post_year = post.previous.date | date: "%Y" %}
 
-{% endfor %}
+      {% if this_post_year != prev_post_year %}
+        <li><span>{{this_post_year}}</span>
+          <ul>
+      {% endif %}
+
+            <li>{{ post.date | date: "%m-%d" }} : <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+
+      {% if this_post_year != next_post_year %}
+          </ul>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+{% endif %}
