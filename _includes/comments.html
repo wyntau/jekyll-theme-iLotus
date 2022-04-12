@@ -2,7 +2,7 @@
   <div id="comments">
   {% case site.comments.provider %}
     {% when "disqus" %}
-      {% if site.comments.disqus and site.comments.disqus.short_name %}
+      {% if site.comments.disqus and site.comments.disqus.shortname %}
         {% include comments-disqus.html %}
       {% endif %}
   {% endcase %}
