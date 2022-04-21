@@ -11,55 +11,11 @@
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
   {% include custom-body-pre.html %}
-  <nav class="lotus-nav">
-    <ul>
-      {% for nav in site.data.iLotus.nav_items %}
-      {% assign activeClass = nil %}
-      {% assign pageUrl = page.url %}
-      {% assign pageUrlWithSuffix = page.url | append: '.html' %}
-      {% if pageUrl == nav.url or pageUrlWithSuffix == nav.url %}
-        {% assign activeClass = 'current' %}
-      {% endif %}
-      <li class="{{ nav.class }} {{ activeClass }}">
-        {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-        <a href="{{ nav.url }}" rel="bookmark" target="_blank" title="{{ nav.title }}">
-          <i class="{{ nav.icon }}"></i>
-        </a>
-        {% else %}
-        <a href="{{ nav.url | relative_url}}" rel="bookmark" title="{{ nav.title }}">
-          <i class="{{ nav.icon }}"></i>
-        </a>
-        {% endif %}
-      </li>
-      {% endfor %}
-
-      {% for menu in site.data.iLotus.menu_items %}
-      {% assign activeClass = nil %}
-      {% assign pageUrl = page.url %}
-      {% assign pageUrlWithSuffix = page.url | append: '.html' %}
-      {% if pageUrl == menu.url or pageUrlWithSuffix == menu.url %}
-        {% assign activeClass = 'current' %}
-      {% endif %}
-      <li class="{{ menu.class }} {{ activeClass }}">
-        {% if menu.url contains 'http://' or menu.url contains 'https://' %}
-        <a href="{{ menu.url }}" rel="bookmark" target="_blank" title="{{ menu.title }}">
-          <i class="{{ menu.icon }}"></i>
-        </a>
-        {% else %}
-        <a href="{{ menu.url | relative_url}}" rel="bookmark" title="{{ menu.title }}">
-          <i class="{{ menu.icon }}"></i>
-        </a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  {% include primary_nav.html %}
 
   {{ content }}
 
-<footer class="lotus-footer">
-  <p>Copyright © {{ site.data.iLotus.copyright.begin_year }}–{{ site.time | date: "%Y" }} {{ site.title }} All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
-</footer>
-{% include custom-body-post.html %}
+  {% include site_footer.html %}
+  {% include custom-body-post.html %}
 </body>
 </html>
